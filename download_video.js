@@ -6,5 +6,5 @@
 	var a = document.createElement("a");
 	a.href = mosthdvideo.url;
 	a.download = (JSON.parse(ytplayer.config.args.player_response)).videoDetails.title;
-	a.click()
+	a.click();
 }
