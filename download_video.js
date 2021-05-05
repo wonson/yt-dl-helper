@@ -4,8 +4,17 @@ javascript:{
 	var mosthdvideo = videoinfolist.reduce((a, b) => {
 		return a.height > b.height ? a : b;
 	});
+
 	var a = document.createElement("a");
-	a.href = mosthdvideo.url;
+    	var objurl = window.URL.createObjectURL(
+		    await fetch(mosthdvideo.url).
+            then(r => r.blob()).
+            then(blobFile => 
+                new File([blobFile], r.videoDetails.title, { type: mosthdvideo.mimeType })
+            )
+        )
+	a.href = objurl;
 	a.download = r.videoDetails.title;
 	a.click();
+    	a.remove();
 }
