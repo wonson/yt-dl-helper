@@ -1,4 +1,4 @@
-{
+javascript:{
 	var r = ytplayer.config.args.raw_player_response;
 	var videoinfolist = r.streamingData.formats;
 	var mosthdvideo = videoinfolist.reduce((a, b) => {
