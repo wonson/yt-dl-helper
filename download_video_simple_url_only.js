@@ -19,7 +19,10 @@ javascript:{
 
 		var url = video.url || cipherurl()
 		if (!url) {
-			return
+			console.log(video)
+			var msg = "No url for unknown reason"
+			alert(msg)
+			throw msg
 		}
 
 		var a = document.createElement("a");
