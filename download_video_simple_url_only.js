@@ -6,23 +6,23 @@ javascript:{
 			return a.height > b.height ? a : b;
 		});
 		mosthdvideo["title"] = r.videoDetails.title;
-		return mosthdvideo
+		return mosthdvideo;
 	}
 
 	async function dlvideo(video) {
 		function cipherurl() {
 			/* I surrender */
-			var msg = "Not working for video.cipher or video.signatureCipher"
-			alert(msg)
-			throw msg
+			var msg = "Not working for video.cipher or video.signatureCipher";
+			alert(msg);
+			throw msg;
 		}
 
 		var url = video.url || cipherurl()
 		if (!url) {
-			console.log(video)
-			var msg = "No url for unknown reason"
-			alert(msg)
-			throw msg
+			console.log(video);
+			var msg = "No url for unknown reason";
+			alert(msg);
+			throw msg;
 		}
 
 		var a = document.createElement("a");
@@ -39,5 +39,5 @@ javascript:{
 		a.remove();
 	}
 
-	dlvideo(getvideo())
+	dlvideo(getvideo());
 }
