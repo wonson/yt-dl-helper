@@ -27,7 +27,7 @@ javascript:{
 
 		var a = document.createElement("a");
 			var objurl = window.URL.createObjectURL(
-				await fetch(url).
+				await fetch(url, {mode:'no-cors'}).
 				then(r => r.blob()).
 				then(blobFile => 
 					new File([blobFile], video.title, { type: video.mimeType })
