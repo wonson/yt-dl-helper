@@ -11,7 +11,7 @@ javascript:{
 
 	async function dlvideo(video) {
 		function cipherurl() {
-			// I surrender
+			/* I surrender */
 			var msg = "Not working for video.cipher or video.signatureCipher"
 			alert(msg)
 			throw msg
