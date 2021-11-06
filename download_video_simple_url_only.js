@@ -17,7 +17,7 @@ javascript:{
 			throw msg;
 		}
 
-		var url = video.url || cipherurl()
+		var url = video.url || cipherurl();
 		if (!url) {
 			console.log(video);
 			var msg = "No url for unknown reason";
