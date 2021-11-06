@@ -32,7 +32,7 @@ javascript:{
 				then(blobFile => 
 					new File([blobFile], video.title, { type: video.mimeType })
 				)
-			)
+			);
 		a.href = objurl;
 		a.download = video.title;
 		a.click();
