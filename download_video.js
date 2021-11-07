@@ -11,10 +11,13 @@ javascript:{
 
 	async function dlvideo(video) {
 		function cipherurl() {
-			/* I surrender */
-			var msg = "Not working for video.cipher or video.signatureCipher";
-			alert(msg);
-			throw msg;
+			var a = new URLSearchParams(video.signatureCipher);
+
+			var u = new URL(a.get("url"));
+			u.searchParams.set("alr", "yes");
+			u.searchParams.set(a.get("sp"), a.get("s").split("").splice(0,3).reverse().splice(0,3));
+
+			return u.toString()
 		}
 
 		var url = video.url || cipherurl();
